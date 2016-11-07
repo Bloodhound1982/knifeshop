@@ -1,0 +1,95 @@
+//Flexbox
+@mixin dflex($direction, $justify, $align) {
+    display: flex;
+    
+    @if $direction == r {
+        flex-direction: row;
+    } @else if $direction == c {
+        flex-direction: column;
+    }
+    
+    @if $justify == s {
+        justify-content: flex-start;
+    } @else if $justify == e {
+        justify-content: flex-end;
+    } @else if $justify == c {
+        justify-content: center;
+    } @else if $justify == b {
+        justify-content: space-between;
+    } @else if $justify == a {
+        justify-content: space-around;
+    }
+    
+    @if $align == s {
+        align-items: flex-start;
+    } @else if $align == e {
+        align-items: flex-end;
+    } @else if $align == c {
+        align-items: center;
+    } @else if $align == b {
+        align-items: baseline;
+    } @else if $align == st {
+        align-items: stretch;
+    }
+}
+//Gradient with 4 markers from left to right
+@mixin lr-grad($st_color, $st_pos, $sec_color, $sec_pos, $third_color, $third_pos, $end_col, $end_pos) {
+    background: $st_color;
+    background: -moz-linear-gradient(left, $st_color $st_pos, $sec_color $sec_pos, $third_color, $third_pos, $end_col $end_pos);
+    background: -webkit-linear-gradient(left, $st_color $st_pos, $sec_color $sec_pos, $third_color, $third_pos, $end_col $end_pos);
+    background: linear-gradient(to right, $st_color $st_pos, $sec_color $sec_pos, $third_color, $third_pos, $end_col $end_pos);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$st_color', endColorstr='$end_col',GradientType=1 );
+}
+//Custom radio button. With any Unicod's elements
+@mixin custom_input($type, $symbol_empty, $symbol_checked, $color) {
+    @if $type == 'radio' {
+        input[type='radio'] + label {
+            cursor: pointer;
+        }
+        input[type='radio']:not(checked) {
+            position: absolute;
+            opacity: 0;
+        }
+        input[type='radio']:not(checked) + label {
+            position: relative;
+            padding: 0 0 0 3rem;
+        }
+        input[type='radio']:not(checked) + label:before {
+            content: $symbol_empty;
+            font-size: 3rem;
+            position: absolute;
+        }
+        input[type='radio']:hover + label:before {
+            color: $color;
+        }
+        input[type='radio']:checked + label:before {
+            content: $symbol_checked;
+            color: $color;
+        }
+    }
+    @if $type == 'checkbox' {
+        input[type='checkbox'] + label {
+            cursor: pointer;
+        }
+        input[type='checkbox']:not(checked) {
+            position: absolute;
+            opacity: 0;
+        }
+        input[type='checkbox']:not(checked) + label {
+            position: relative;
+            padding: 0 0 0 3rem;
+        }
+        input[type='checkbox']:not(checked) + label:before {
+            content: $symbol_empty;
+            font-size: 3rem;
+            position: absolute;
+        }
+        input[type='checkbox']:hover + label:before {
+            color: $color;
+        }
+        input[type='checkbox']:checked + label:before {
+            content: $symbol_checked;
+            color: $color;
+        }
+    }
+}

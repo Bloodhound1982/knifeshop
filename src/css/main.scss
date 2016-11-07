@@ -1,0 +1,744 @@
+@import "reset.css";
+@import "fonts.scss";
+@import "mixins/mixins.scss";
+@import "animation.scss";
+
+/*------------ Variables start ------------- */
+$back_color: #e3e4e6;
+$back_light_color: #D6D6D6;
+$font_color: #808080;
+
+/*------------ Variables end --------------- */
+
+html {
+	font-size: 1vw;
+	font-family: 'MontserratRegular';
+	background: $back_color;
+}
+
+/*------------ Header start ------------- */
+header {
+	background: #fff;
+
+	nav.general {
+		margin: {
+			left: 10rem;
+			right: 10rem;
+		}
+		@include dflex(r, b, c);
+
+		.logo {
+			.first {
+				font-family: 'NothingYouCouldDo';
+				font-size: 2.5rem;	
+
+				sub {
+					font-family: 'RighteousRegular';
+					color: $font_color;
+					font-size: 1.5rem;
+					padding-left: 0.5rem;
+
+				}
+			}
+		}
+		.menu {
+			@include dflex(r, c, c);
+
+			.item {
+				padding: 3rem 1rem;
+				font-size: 1.2rem;
+			}
+
+			.item:hover {
+				cursor: pointer;
+				text-decoration: underline;
+			}
+		}
+		.login {
+			@include dflex(r, a, c);
+			text-transform: uppercase;
+
+			.cart:hover {
+				text-shadow: 2px 5px 6px $font_color;
+				cursor: pointer;
+			}
+			.tag {
+				background: $back_light_color;
+				padding: 0.3rem 0.5rem;
+				margin: {
+					left: 0.3rem;
+					right: 1rem;
+				}
+				border-radius: 12px;
+				
+			}
+			.sign {
+				border: 2px solid $back_light_color;
+				padding: 0.5rem 1rem;
+				border-radius: 2rem;
+				margin-left: 2rem;
+
+			}
+			.sign:hover {
+				border-color: #000;
+				cursor: pointer;
+			}
+
+		}
+	}
+	nav.search {
+		border-top: 1px solid $back_color;
+		@include dflex(r, b, c);
+		
+		.category {
+			margin: {
+			left: 10rem;
+			right: 10rem;
+			}
+			@include dflex(r, s, c);
+			text-transform: uppercase;
+			color: $font_color;
+
+			.knives_category {
+				padding: 1rem;
+			}
+			.knives_category:hover {
+				color: #000;
+				cursor: pointer;
+			}
+		}
+		.search_field {
+			position: relative;
+			@include dflex(r, b, c);
+			margin-right: 10rem;
+
+			.support {
+				text-transform: uppercase;
+				color: $font_color;
+				margin-right: 2rem;
+			}
+			.support:hover {
+				color: #000;
+				cursor: pointer;
+			}
+
+			.sign {
+				position:absolute;
+				top: 0.1rem;
+			}
+
+			input[type="text"] {
+				outline: none;
+				font-family: 'MontserratRegular';
+				border: none;
+				padding-left: 1.5rem;
+				font-size: 1rem;
+				height: 1.5rem;
+			}
+		}
+	}
+}
+/*------------ Header end ------------- */
+/*------------ Carousel start ------------- */
+.carousel {
+
+	.slick-dots li button:before {
+		color: #fff;
+		top: -4rem;
+		content: '\25CB';
+		font-size: 2rem;
+	}
+
+	.slick-dots li.slick-active button:before {
+	    opacity: .75;
+	    color: #fff;
+	    content: '\25C9';
+	    font-size: 1.4rem;
+	}
+
+	.carousel_item_1 {
+		@include lr-grad(#0d1b42, 0%, #13327a, 20%, #13327a, 55%, #0d1b42, 100%);
+		position: relative;
+
+		.btn-prev, .btn-next {
+			position: absolute;
+			border: 0.1rem solid #fff;
+			width: 3rem;
+			height: 3rem;
+			border-radius: 2rem;
+			top: 13.4rem;
+			color: $back_light_color;
+
+			i {
+				padding: 0.5rem 1rem;
+			}
+		}
+
+		.btn-prev:hover, .btn-next:hover {
+			background: $back_light_color;
+			color: #102963;
+			cursor: pointer;
+		}
+
+		.btn-prev {
+			left: 6rem;
+		}
+
+		.btn-next {
+			right: 6rem;
+		}
+
+
+		.advertise {
+			margin: 0rem 15rem;
+			@include dflex(r, b, c);
+			height: 30rem;
+
+			.description {
+				width: 28vw;
+				color: #fff;
+	
+				.title {
+					font-family: 'MontserratBold';
+					font-size: 2.5rem;
+					margin-bottom: 3rem;
+				}
+	
+				.text {
+					margin-bottom: 4rem;
+				}
+		
+				.btn {
+					border: 0.15rem solid #fff;
+					padding: 0.5rem 2rem;
+					border-radius: 2rem;
+					display: inline;
+					text-transform: uppercase;
+				}
+
+				.btn:hover {
+					background: #fff;
+					color: #102963;
+					cursor: pointer;
+				}	
+			}
+		
+			img {
+				filter: drop-shadow(1px 2px 6px #000);
+				width: 28vw;
+			}
+		}
+	}
+
+	.carousel_item_2 {
+		height: 400px;
+		background: green;
+	}
+}
+/*------------ Carousel end ------------- */
+/*------------ Filter bar start ------------- */
+.filter_bar {
+	@include dflex(r, b, c);
+	margin: 1rem 10rem;
+	background: #fff;
+	border-radius: 0.4rem;
+	padding: 0 2rem;
+
+	label {
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		color: $font_color;
+		margin-right: 0.3rem;
+	}
+
+	input[type="text"], input[type="number"] {
+		background: $back_color;
+		outline: none;
+		font-family: 'MontserratRegular';
+		border: 0.125em solid $back_light_color;
+		border-radius: 1.5rem;
+		padding: 0.3rem 1rem;
+		width: 7rem;
+		font-size: 1rem;
+	}
+
+	.sort_by {
+		@include dflex(r, b, c);
+		flex-wrap: wrap;
+		margin: {
+			top: 1.5rem;
+			bottom: 1.5rem;
+		}
+
+		label {
+			margin-right: 2rem;
+		}
+
+		.select_wrapper {
+			@include dflex(r, s, c);
+			display: inline-flex;
+			width: 7rem;
+
+			i {
+				color: $font_color;
+			}
+			select {
+				-moz-appearance: inherit;
+				-webkit-appearance: inherit;
+				background: #fff;
+				font-family: 'MontserratRegular';
+				font-size: 0.8rem;
+				text-transform: uppercase;
+				border: none;
+				padding-right: 0.2rem;
+			}
+			select:focus {
+				outline: none;
+			}
+		}
+	}
+	.keywords {
+		@include dflex(r, b, c);
+		flex-wrap: wrap;
+	}
+
+	.price {
+		@include dflex(r, b, c);
+		flex-wrap: wrap;
+
+		input[type="number"] {
+			width: 3rem;
+		}
+
+		#from { 
+		  -moz-appearance: textfield;
+		}
+		#from::-webkit-inner-spin-button { 
+		  display: none;
+		}
+		#to { 
+		  -moz-appearance: textfield;
+		}
+		#to::-webkit-inner-spin-button { 
+		  display: none;
+		}
+	}
+	.freeship {
+		font-size: 0.9rem;
+		margin-right: 0.3rem;
+
+		label {
+			font-size: 0.9rem;
+			text-transform: none;
+
+		}
+		input[type="checkbox"] + label{
+			cursor: pointer;
+		}
+
+		input[type="checkbox"]:not(checked) {
+			position: absolute;
+			opacity: 0;
+		}
+		input[type="checkbox"]:not(checked) + label {
+			position: relative;
+			padding: 0 0 0 3rem;
+		}
+		input[type="checkbox"]:not(checked) + label:before {
+			content: '\25CB';
+			font-size: 3rem;
+			position: absolute;
+			top: -1.5rem;
+			left: 0.9rem;
+		}
+		input[type="checkbox"]:hover + label:before {
+			color: #009122;
+		}
+		input[type="checkbox"]:checked + label:before {
+			content: '\2714';
+			color: #009122;
+		}
+		input[type="checkbox"]:checked + label {
+			color: #000;
+		}
+	}
+	.ship {
+
+		label {
+			margin-right: 2rem;
+		}
+		select {
+			-moz-appearance: inherit;
+			-webkit-appearance: inherit;
+			background: #fff;
+			font-family: 'MontserratRegular';
+			font-size: 0.8rem;
+			text-transform: uppercase;
+			border: none;
+			padding-right: 0.2rem;
+
+		}
+		select:focus {
+			outline: none;
+		}
+		i {
+			color: $font_color;
+		}
+	}
+}
+/*------------ Filter bar end ------------- */
+/*------------ General start ------------- */
+.general {
+	@include dflex(r, b, s);
+	margin: 1rem 10rem;
+	.sidebar {
+		margin-top: 2rem;
+		margin-right: 2rem;
+		@include dflex(c, s, st);
+		width: 20vw;
+
+		.category {
+			background: #fff;
+			border-radius: 1rem;
+			margin-bottom: 2rem;
+
+			.accordion {
+				@include dflex(r, b, c);
+				font-family: MontserratRegular;
+				background-color: #fff;
+				color: #000;
+				cursor: pointer;
+				padding: 1rem;
+				width: 100%;
+				text-align: left;
+				transition: 0.4s;
+				border-bottom: 0.1rem solid $back_color;
+				width: 18rem;
+
+				&:nth-of-type(1) {
+					border-radius: 0.4rem 0.4rem 0 0;
+				}
+				&:nth-last-child(2) {
+					border-radius: 0 0 0.4rem 0.4rem;
+				}
+			}
+			.panel {
+				background-color: $back_light_color;
+				max-height: 0;
+			    overflow: hidden;
+			    transition: 0.6s ease-in-out;
+			    opacity: 0;
+				color: $font_color;
+
+			}
+			.panel.item {
+				font-size: 1rem;
+				background: $back_light_color;
+				text-transform: uppercase;
+			}
+			.panel.show {
+				opacity: 1;
+	    		max-height: 35rem;
+			}
+			.item {
+				padding: 1rem;
+				border-bottom: 0.1rem solid #b3b1b1;
+			}
+			.item:hover {
+				color: #000;
+				cursor: pointer;
+			}
+			.accordion:after {
+			    content: '\203A'; 
+			    font-size: 2rem;
+			    color: #777;
+			    float: right;
+			    margin-left: 5px;
+			}
+			.accordion.active:after {
+			    content: "\0203A";
+			    animation-fill-mode: both;
+			    transition-delay: 0.3s;
+			    transform: rotate(90deg);
+			}
+		}
+
+		.filters {
+			background: #fff;
+			color: #000;
+			text-align: left;
+			width: 20rem;
+			border-radius: 0.4rem;
+			margin-bottom: 2rem;
+		}	
+
+		.quantity_item {
+			color: $font_color;
+			float: right;
+		}
+		.available {
+			text-transform: uppercase;
+			border-bottom: 0.1rem solid $back_color;
+			padding: 1.3rem 1rem;
+			}
+		.storage {
+			padding-top: 1.5rem;
+			padding-bottom: 1.5rem;
+			border-bottom: 0.1rem solid $back_color;
+			@include custom_input('radio', '\25CB', '\25C9', #009122);
+			input[type="radio"]:not(checked) + label:before {
+				top: -1.45rem;
+    			left: 0.7rem;
+			}
+			input[type="radio"]:checked + label:before {
+				font-size: 1.8rem;
+			    top: -.7rem;
+			    left: 0.85rem;
+			}
+			.radio {
+				padding: 1rem;
+			}
+		}
+		.brands {
+			border-bottom: 0.1rem solid $back_color;
+			.brands_title {
+				text-transform: uppercase;
+				border-bottom: 0.1rem solid $back_color;
+				padding: 1.3rem 1rem;
+			}
+			a {
+				float: right;
+			}
+			ul {
+				padding-bottom: 1.5rem;
+				padding-top: 1.5rem;
+				@include custom_input('checkbox', '\2610', '\2611', #009122);
+				input[type="checkbox"]:not(checked) + label:before {
+					top: -0.55rem;
+					left: 0.9rem;
+					font-size: 2rem;
+				}
+				input[type="checkbox"]:checked + label:before {
+					font-size: 2rem;
+				}
+				.brands_item {
+					padding: 1rem;
+				}
+			}
+		}
+		.conditions {
+
+			.conditions_title {
+				text-transform: uppercase;
+				border-bottom: 0.1rem solid $back_color;
+				padding: 1.3rem 1rem;
+			}
+			ul {
+				padding-bottom: 1.5rem;
+				padding-top: 1.5rem;
+				@include custom_input('checkbox', '\2610', '\2611', #009122);
+
+				input[type="checkbox"]:not(checked) + label:before {
+					top: -0.55rem;
+					left: 0.9rem;
+					font-size: 2rem;
+				}
+				input[type="checkbox"]:checked + label:before {
+					font-size: 2rem;
+				}
+				.conditions_item {
+					padding: 1rem;
+				}
+			}
+		}
+		.delivery {
+			
+			.delivery_title {
+				text-transform: uppercase;
+				border-bottom: 0.1rem solid $back_color;
+				padding: 1.3rem 1rem;
+			}
+			ul {
+				padding: 1.5rem;
+				@include dflex(r, b, c);
+				@include custom_input('radio', '\25CB', '\25C9', #009122);
+
+				input[type="radio"]:not(checked) + label:before {
+				top: -1.45rem;
+    			left: 0.7rem;
+				}
+				input[type="radio"]:checked + label:before {
+				font-size: 1.8rem;
+			    top: -.7rem;
+			    left: 0.85rem;
+				}
+			}
+		} 
+	}
+	.products {
+		margin-top: 2rem;
+		@include dflex(r,b,st);
+		flex-basis: 55vw;
+		flex-wrap: wrap;
+			flex-basis: 30%;
+			@include dflex(c, b, c);
+			margin-right: 2rem;
+			background: #fff;
+			color: #000;
+			text-align: center;
+			border-radius: 0.4rem;
+			margin-bottom: 2rem;
+
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+			.knife_image {
+				width: 100%;
+				border-radius: 1rem;
+			}
+
+			.knife_image:hover {
+				cursor: zoom-in;
+			}
+			.product_title {
+				font-size: 1rem;
+				padding: 1.3rem 1rem 0rem;
+			}
+			.catalogue_number {
+				font-size: 1.2rem;
+				padding: 0.5rem 1rem;
+				color: $font_color;
+			}
+			.product_price {
+				font-size: 1.5rem;
+				padding: 0.5rem;
+				color: #009122;
+			}
+			.btn_buy {
+				font-size: 1.3rem;
+				text-transform: uppercase;
+				padding: 0.5rem;
+				border: 0.1rem solid #009122;
+				width: 12rem;
+			    margin: 0 auto 1rem;
+			    border-radius: 2rem;
+			    color: #009122;
+			    font-family: 'MontserratBold';
+			}
+			.btn_buy:hover {
+				background: #009122;
+				color: #fff;
+				cursor: pointer;
+			}
+		}
+	}
+}
+/*------------ General end ------------- */
+/*------------ Pagination start ------------- */
+.pagination {
+	@include dflex(r, b, c);
+	margin: 1rem 10rem;
+	background: #fff;
+	border-radius: 0.4rem;
+	padding: 0 2rem;
+	.left, .item, .right {
+		margin: 0.5rem;
+		padding: 1rem 1.5rem;
+		border-radius: 2rem;
+	}
+	.left:hover, .item:hover, .right:hover {
+		box-shadow: 0.1rem 0.1rem 1rem $font_color;
+		cursor: pointer;
+	}
+	.pages {
+		@include dflex(r, a,c);
+		.item:active {
+			box-shadow: 0.1rem 0.1rem 1rem $font_color;
+			cursor: pointer;
+		}
+	}
+}
+/*------------ Pagination end ------------- */
+/*------------ Bestsellers start ------------- */
+.bestsellers {
+	margin: 2rem 10rem;
+	border-radius: 0.4rem;
+	background-color: #fff;
+
+	.title {
+		text-transform: uppercase;
+		text-align: center;
+		padding: 1rem;
+		border-bottom: 0.1rem solid $back_light_color;
+	}
+	.products {
+		@include dflex(r, b, st);
+
+		.product {
+			@include dflex(c, b, c);
+			flex-basis: 25%;
+			border-right: 0.1rem solid $back_light_color;
+			&:nth-last-child(1) {
+				border-right: none;
+			}
+			.knife_image {
+				width: 100%;
+			}
+			.knife_image:hover {
+				cursor: zoom-in;
+			}
+			.product_title {
+				font-size: 1rem;
+				padding: 1.3rem 1rem 0rem;
+			}
+			.catalogue_number {
+				font-size: 1.2rem;
+				padding: 0.5rem 1rem;
+				color: $font_color;
+			}
+			.old_price {
+				font-size: 1rem;
+				color: $font_color;
+				text-decoration: line-through;
+			}
+			.product_price {
+				font-size: 1.5rem;
+				padding: 0.5rem;
+				color: #009122;
+			}
+			.btn_buy {
+				font-size: 1.3rem;
+				text-transform: uppercase;
+				padding: 0.5rem;
+				border: 0.1rem solid #009122;
+				width: 12rem;
+			    margin: 0 auto 1rem;
+			    border-radius: 2rem;
+			    color: #009122;
+			    font-family: 'MontserratBold';
+			    text-align: center;
+			}
+			.btn_buy:hover {
+				background: #009122;
+				color: #fff;
+				cursor: pointer;
+			}
+		}
+	}
+}
+/*------------ Bestsellers end ------------- */
+/*------------ Testimonials start ------------- */
+.testimonials {
+	
+}
+
+/*------------ Testimonials end ------------- */
+/*------------ Header start ------------- */
+/*------------ Header end ------------- */
+/*------------ Header start ------------- */
+/*------------ Header end ------------- */
+/*------------ Header start ------------- */
+/*------------ Header end ------------- */
+
+
+
