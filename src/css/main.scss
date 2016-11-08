@@ -773,20 +773,40 @@ header {
 	}
 
 	.bottom_part {
+		margin: 2rem 0;
 		color: $font_color;
+		@include dflex(r, b, st);
+
+		.quotes {
+			font-family: 'CrimsonTextItalic';
+			font-size: 1.5rem;
+
+			.quote {
+			}
+			span {
+				font-family: 'CrimsonTextRoman';
+			}
+		}
+		.copyright {
+			@include dflex(c, b, st)
+			.terms {
+				text-transform: uppercase;
+			}
+			.terms:hover {
+				color: #fff;
+				cursor: pointer;
+			}
+			.author {
+				a {
+					text-decoration: none;
+					color: $font_color;
+				}
+				a:hover {
+					color: #fff;
+					border-bottom: 0.1rem dotted #fff;
+				}
+			}
+		}
 	}
-
-	
-
 }
-
 /*------------ Footer end ------------- */
-/*------------ Header start ------------- */
-/*------------ Header end ------------- */
-/*------------ Header start ------------- */
-/*------------ Header end ------------- */
-/*------------ Header start ------------- */
-/*------------ Header end ------------- */
-
-
-
