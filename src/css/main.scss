@@ -580,6 +580,7 @@ header {
 		@include dflex(r,b,st);
 		flex-basis: 55vw;
 		flex-wrap: wrap;
+		.product {
 			flex-basis: 30%;
 			@include dflex(c, b, c);
 			margin-right: 2rem;
@@ -727,12 +728,59 @@ header {
 	}
 }
 /*------------ Bestsellers end ------------- */
-/*------------ Testimonials start ------------- */
-.testimonials {
+/*------------ Footer start ------------- */
+.footer {
+	background-color: rgb(39, 39, 44);
+	color: #fff;
+	padding: 1rem 10rem;
+
+	.main_part {
+		@include dflex(r, b, c);
+		border-bottom: 0.1rem solid $font_color;
+		padding: 3rem 0;
+
+		.logo {
+			.first {
+				font-family: 'NothingYouCouldDo';
+				font-size: 2rem;	
+
+				sub {
+					font-family: 'RighteousRegular';
+					color: $font_color;
+					font-size: 1.1rem;
+				}
+			}
+		}
+
+		ul {
+			@include dflex(r, a, c);
+
+			li {
+				text-transform: uppercase;
+				margin: 1rem;
+			}
+
+			li:hover {
+				cursor: pointer;
+				color: $font_color;
+
+			}
+		}
+
+		.social_item {
+			margin: 0.5rem;
+		}
+	}
+
+	.bottom_part {
+		color: $font_color;
+	}
+
 	
+
 }
 
-/*------------ Testimonials end ------------- */
+/*------------ Footer end ------------- */
 /*------------ Header start ------------- */
 /*------------ Header end ------------- */
 /*------------ Header start ------------- */
