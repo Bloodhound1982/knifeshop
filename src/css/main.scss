@@ -9,13 +9,11 @@ $back_light_color: #D6D6D6;
 $font_color: #808080;
 
 /*------------ Variables end --------------- */
-
 html {
-	font-size: 1vw;
+//	font-size: 1vw;
 	font-family: 'MontserratRegular';
 	background: $back_color;
 }
-
 /*------------ Header start ------------- */
 header {
 	background: #fff;
@@ -26,6 +24,7 @@ header {
 			right: 10rem;
 		}
 		@include dflex(r, b, c);
+		flex-wrap: wrap;
 
 		.logo {
 			.first {
@@ -42,11 +41,10 @@ header {
 			}
 		}
 		.menu {
-			@include dflex(r, c, c);
+			@include dflex(r, c, a);
+			flex-wrap: wrap;
 
 			.item {
-				padding: 3rem 1rem;
-				font-size: 1.2rem;
 			}
 
 			.item:hover {
@@ -59,7 +57,7 @@ header {
 			text-transform: uppercase;
 
 			.cart:hover {
-				text-shadow: 2px 5px 6px $font_color;
+				text-decoration: underline;
 				cursor: pointer;
 			}
 			.tag {
@@ -76,7 +74,7 @@ header {
 				border: 2px solid $back_light_color;
 				padding: 0.5rem 1rem;
 				border-radius: 2rem;
-				margin-left: 2rem;
+//				margin-left: 2rem;
 
 			}
 			.sign:hover {
@@ -810,3 +808,4 @@ header {
 	}
 }
 /*------------ Footer end ------------- */
+@import "media.scss";
