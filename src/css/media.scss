@@ -1,0 +1,60 @@
+@media screen and (max-width: 1200px) {
+	html {
+		font-size: 1vw;
+	}
+	nav.general {
+		.logo {
+		}
+		.menu {
+			.item {
+				padding: 3rem 1rem;
+				font-size: 1.2rem;
+			}
+		}
+		.login {
+			.sign {
+				margin-left: 2rem;
+			}
+		}
+	}
+}
+@media screen and (max-width: 980px) {
+	html {
+		font-size: 1rem;
+	}
+
+	nav.general {
+		padding-top: 2rem;
+
+		.logo {
+			order: 1;
+		}
+		.menu {
+			flex-grow: 2;
+			order: 3;
+			.item {
+				padding: 1rem;
+				font-size: 1rem;
+			}
+		}
+		.login {
+			order: 2;
+			
+			.sign {
+				margin-left: 0.5rem;
+			}
+
+			.cart {
+
+				i {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+
+
+}
