@@ -84,7 +84,6 @@ header {
 		@include dflex(r, b, c);
 		
 		.category {
-			
 			@include dflex(r, b, c);
 			text-transform: uppercase;
 			color: $font_color;
