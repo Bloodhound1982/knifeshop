@@ -19,10 +19,7 @@ header {
 	background: #fff;
 
 	nav.general {
-		margin: {
-			left: 10rem;
-			right: 10rem;
-		}
+		
 		@include dflex(r, b, c);
 		flex-wrap: wrap;
 
@@ -74,14 +71,12 @@ header {
 				border: 2px solid $back_light_color;
 				padding: 0.5rem 1rem;
 				border-radius: 2rem;
-//				margin-left: 2rem;
 
 			}
 			.sign:hover {
 				border-color: #000;
 				cursor: pointer;
 			}
-
 		}
 	}
 	nav.search {
@@ -89,11 +84,8 @@ header {
 		@include dflex(r, b, c);
 		
 		.category {
-			margin: {
-			left: 10rem;
-			right: 10rem;
-			}
-			@include dflex(r, s, c);
+			
+			@include dflex(r, b, c);
 			text-transform: uppercase;
 			color: $font_color;
 
@@ -153,12 +145,7 @@ header {
 	    content: '\25C9';
 	    font-size: 1.4rem;
 	}
-
-	.carousel_item_1 {
-		@include lr-grad(#0d1b42, 0%, #13327a, 20%, #13327a, 55%, #0d1b42, 100%);
-		position: relative;
-
-		.btn-prev, .btn-next {
+	.btn-prev, .btn-next {
 			position: absolute;
 			border: 0.1rem solid #fff;
 			width: 3rem;
@@ -171,7 +158,6 @@ header {
 				padding: 0.5rem 1rem;
 			}
 		}
-
 		.btn-prev:hover, .btn-next:hover {
 			background: $back_light_color;
 			color: #102963;
@@ -184,16 +170,21 @@ header {
 
 		.btn-next {
 			right: 6rem;
+			.fa {
+				padding-left: 1.2rem;
+			}
 		}
 
 
+	.carousel_item_1 {
+		@include lr-grad(#0d1b42, 0%, #13327a, 20%, #13327a, 55%, #0d1b42, 100%);
+		position: relative;
+
 		.advertise {
-			margin: 0rem 15rem;
 			@include dflex(r, b, c);
 			height: 30rem;
 
 			.description {
-				width: 28vw;
 				color: #fff;
 	
 				.title {
