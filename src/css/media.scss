@@ -1,3 +1,5 @@
+
+
 @media screen and (min-width: 981px) {
 	html {
 		font-size: 1vw;
@@ -53,7 +55,7 @@
 /*------- General end -----------*/	
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (min-width: 481px) and (max-width: 980px) {
 	html {
 		font-size: 2vw;
 	}
@@ -179,7 +181,7 @@
 				}
 			}
 			.conditions_item {
-				
+
 				.quantity_item {
 				}
 			}
@@ -192,7 +194,7 @@
 
 @media screen and (max-width: 480px) {
 	html {
-		font-size: 2.5vw;
+		font-size: 3vw;
 	}
 /*------- Header start -----------*/	
 	nav.general {
@@ -232,6 +234,7 @@
 
 		.category {
 			margin: 0;
+			flex-wrap: wrap;
 		}
 		.search_field {
 			padding: 0 1rem 1rem;
@@ -244,7 +247,7 @@
 /*------- Carousel start -----------*/
 .carousel {
 	.btn-prev, .btn-next {
-			display: none;
+		display: none;
 	}
 	.carousel_item_1 {
 		
@@ -267,7 +270,20 @@
 /*------- Filter bar start -----------*/
 .filter_bar {
 	margin: 0 1rem;
-	flex-wrap: wrap;	
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+
+	.sort_by {
+		margin-bottom: 0.5rem;
+	}
+
+	.keywords {
+		input[type="text"] {
+			width: 70%;
+		}
+	}
 
 	.price {
 		margin-bottom: 1.5rem;
@@ -280,7 +296,8 @@
 	}
 	.ship {
 		margin-bottom: 1.5rem;
-		align-self: center;
+		align-self: flex-end;
+		margin-top: -2.5rem;
 	}
 }
 /*------- Filter bar end -----------*/	
