@@ -160,7 +160,7 @@ header {
 		}
 		.btn-prev:hover, .btn-next:hover {
 			background: $back_light_color;
-			color: #102963;
+			color: $font_color;
 			cursor: pointer;
 		}
 
@@ -220,8 +220,46 @@ header {
 	}
 
 	.carousel_item_2 {
-		height: 400px;
-		background: green;
+		@include lr-grad(#942908, 0%, #DE6743, 20%, #DE6743, 55%, #942908, 100%);
+		position: relative;
+
+		.advertise {
+			@include dflex(r, b, c);
+			height: 30rem;
+
+			.description {
+				color: #fff;
+	
+				.title {
+					font-family: 'MontserratBold';
+					font-size: 2.5rem;
+					margin-bottom: 3rem;
+				}
+	
+				.text {
+					margin-bottom: 4rem;
+				}
+		
+				.btn {
+					border: 0.15rem solid #fff;
+					padding: 0.5rem 2rem;
+					border-radius: 2rem;
+					display: inline;
+					text-transform: uppercase;
+				}
+
+				.btn:hover {
+					background: #fff;
+					color: #DE6743;
+					cursor: pointer;
+				}	
+			}
+		
+			img {
+				filter: drop-shadow(1px 2px 6px #000);
+				width: 28vw;
+			}
+		}
 	}
 }
 /*------------ Carousel end ------------- */

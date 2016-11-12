@@ -37,11 +37,7 @@ $back_light_color: #d6d6d6;
 /*------- Header end -----------*/	
 /*------- Carousel start -----------*/
 .carousel {
-	.btn-prev, .btn-next {
-	}
-	.carousel_item_1 {
-
-		
+	.carousel_item_1, .carousel_item_2 {
 		.advertise {
 			margin: 0rem 15rem;
 
@@ -131,18 +127,15 @@ $back_light_color: #d6d6d6;
 		right: 2rem;
 		.fa {
 			padding: 0.3rem 0.6rem;
-
 		}
 	}
-	.carousel_item_1 {
+	.carousel_item_1, .carousel_item_2 {
 		
 		.advertise {
 			margin: 0rem 5rem;
 
 			.description {
 				width: 48vw;
-
-
 			}
 		}
 	}
@@ -325,7 +318,7 @@ $back_light_color: #d6d6d6;
 	.btn-prev, .btn-next {
 		display: none;
 	}
-	.carousel_item_1 {
+	.carousel_item_1, .carousel_item_2 {
 		
 		.advertise {
 			margin: 0rem 2rem;
