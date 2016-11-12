@@ -1,5 +1,7 @@
 
 
+$back_light_color: #d6d6d6;
+
 @media screen and (min-width: 981px) {
 	html {
 		font-size: 1vw;
@@ -50,9 +52,15 @@
 	}
 }
 /*------- Carousel end -----------*/
-/*------- General start -----------*/
-
-/*------- General end -----------*/	
+/*------- Bestsellers start -----------*/
+.bestsellers {
+	.products {
+		.product {
+			border-right: 0.1rem solid $back_light_color;
+		}
+	}
+}
+/*------- Bestsellers end -----------*/
 }
 
 @media screen and (min-width: 481px) and (max-width: 980px) {
@@ -205,6 +213,59 @@
 	}
 }
 /*------- General end -----------*/	
+/*------- Pagination start -----------*/
+.pagination {
+	margin: 1rem 5rem;
+	.pages {
+		.item {
+			@for $i from 6 through 8 {
+				&:nth-of-type(#{$i}) {
+					display: none;
+				}
+			}
+		}
+		.points {
+			display: flex;
+		}
+	}
+}
+/*------- Pagination end -----------*/
+/*------- Bestsellers start -----------*/
+.bestsellers {
+	margin: 2rem 5rem;
+}
+/*------- Bestsellers end -----------*/
+/*------- Footer start -----------*/
+.footer {
+	padding: 1rem 5rem;
+	.main_part {
+		padding: 1.5rem 0 1rem;
+
+		.logo {
+			order: 0;
+		}
+		.menu {
+			order: 3;
+			margin: auto;
+
+		}
+		.social_item {
+			order: 2;
+		}
+	}
+	.bottom_part {
+		margin: 1rem 0;
+
+		.quotes {
+			font-size: 1rem;
+		}
+		.copyright {
+			margin-left: 1rem;
+			font-size: 0.7rem;
+		}
+	}
+}
+/*------- Footer end -----------*/
 }
 
 @media screen and (max-width: 480px) {
@@ -337,5 +398,73 @@
 		}
 	}
 }
-/*------- General end -----------*/	
+/*------- General end -----------*/
+/*------- Pagination start -----------*/
+.pagination {
+	margin: 1rem;
+	.pages {
+		.item {
+			@for $i from 4 through 8 {
+				&:nth-of-type(#{$i}) {
+					display: none;
+				}
+			}
+		}
+		.points {
+			display: flex;
+		}
+	}
+}
+/*------- Pagination end -----------*/
+/*------- Bestsellers start -----------*/
+.bestsellers {
+	margin: 2rem 1rem;
+
+	.product {
+		border: none;
+		&:nth-of-type(odd) {
+			border-right: 0.1rem solid $back_light_color;
+		}
+		&:nth-of-type(even) {
+			border-left: 0.1rem solid $back_light_color;
+		}
+		&:nth-of-type(3) {
+			border-top: 0.1rem solid $back_light_color;
+		}
+		&:nth-of-type(4) {
+			border-top: 0.1rem solid $back_light_color;
+		}
+	}
+}
+/*------- Bestsellers end -----------*/
+/*------- Footer start -----------*/
+.footer {
+	padding: 1rem;
+
+	.main_part {
+		padding: 1.5rem 0;
+
+		.logo {
+			order: 0;
+		}
+		.menu {
+			order: 3;
+		}
+		.social_item {
+			order: 2;
+		}
+	}
+	.bottom_part {
+		margin: 1rem 0;
+
+		.quotes {
+			font-size: 1rem;
+		}
+		.copyright {
+			margin-left: 1rem;
+			font-size: 0.7rem;
+		}
+	}
+}
+/*------- Footer end -----------*/
 }

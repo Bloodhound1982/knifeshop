@@ -3,6 +3,7 @@
 @import "mixins/mixins.scss";
 @import "animation.scss";
 
+
 /*------------ Variables start ------------- */
 $back_color: #e3e4e6;
 $back_light_color: #D6D6D6;
@@ -645,6 +646,9 @@ header {
 			box-shadow: 0.1rem 0.1rem 1rem $font_color;
 			cursor: pointer;
 		}
+		.points {
+			display: none;
+		}
 	}
 }
 /*------------ Pagination end ------------- */
@@ -661,12 +665,12 @@ header {
 		border-bottom: 0.1rem solid $back_light_color;
 	}
 	.products {
-		@include dflex(r, b, st);
+		@include dflex(r, a, st);
+		flex-wrap: wrap;
 
 		.product {
-			@include dflex(c, b, c);
-			flex-basis: 25%;
-			border-right: 0.1rem solid $back_light_color;
+			@include dflex(c, st, c);
+			flex-basis: 24%;
 			&:nth-last-child(1) {
 				border-right: none;
 			}
@@ -700,8 +704,8 @@ header {
 				text-transform: uppercase;
 				padding: 0.5rem;
 				border: 0.1rem solid #009122;
-				width: 12rem;
-			    margin: 0 auto 1rem;
+				width: 11rem;
+			    margin: 0 0.5rem 1rem;
 			    border-radius: 2rem;
 			    color: #009122;
 			    font-family: 'MontserratBold';
@@ -724,6 +728,7 @@ header {
 
 	.main_part {
 		@include dflex(r, b, c);
+		flex-wrap: wrap;
 		border-bottom: 0.1rem solid $font_color;
 		padding: 3rem 0;
 
