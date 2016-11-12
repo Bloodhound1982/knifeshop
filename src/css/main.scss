@@ -377,10 +377,10 @@ header {
 /*------------ Filter bar end ------------- */
 /*------------ General start ------------- */
 .general {
-	@include dflex(r, b, s);
+//	@include dflex(r, b, s);
 	margin: 1rem 10rem;
 	.sidebar {
-		margin-top: 2rem;
+		float: left;
 		margin-right: 2rem;
 		@include dflex(c, s, st);
 		width: 20vw;
@@ -608,8 +608,8 @@ header {
 				text-transform: uppercase;
 				padding: 0.5rem;
 				border: 0.1rem solid #009122;
-				width: 12rem;
-			    margin: 0 auto 1rem;
+				width: 11rem;
+			    margin: 0 0.5rem 1rem;
 			    border-radius: 2rem;
 			    color: #009122;
 			    font-family: 'MontserratBold';

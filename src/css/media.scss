@@ -159,7 +159,7 @@
 .general {
 	margin: 1rem 5rem;
 	.sidebar {
-		width: 10rem;
+		width: 30%;
 
 		.category {
 
@@ -186,6 +186,21 @@
 				}
 			}
 
+		}
+	}
+	.products {
+		.product {
+			width: 24vw;
+			margin: 0;
+			margin-bottom: 1rem;
+
+			.btn_buy {
+				width: 10rem;
+				margin: {
+					left: 0.5rem;
+					right: 0.5rem;
+				}
+			}
 		}
 	}
 }
@@ -305,25 +320,22 @@
 .general {
 	margin: 1rem;
 	.sidebar {
-		width: 20rem;
+		width: 50%;
+		flex-direction: row;
+		flex-wrap: wrap;
 
 		.category {
 
+
 			.accordion {
-				width: 18rem;
-			}
-			.panel {
-				width: 20rem;
+				width: 13rem;
 			}
 		}
 		.filters {
-			width: 20rem;
+			width: 15rem;
 			font-size: 1rem;
-
-
 		}
 	}
-
 }
 /*------- General end -----------*/	
 }
