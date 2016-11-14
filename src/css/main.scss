@@ -135,8 +135,8 @@ header {
 	.slick-dots li button:before {
 		color: #fff;
 		top: -4rem;
-		content: '\25CB';
-		font-size: 2rem;
+		content: '\25EF';
+		font-size: 1.4rem;
 	}
 
 	.slick-dots li.slick-active button:before {
@@ -372,10 +372,10 @@ header {
 			padding: 0 0 0 3rem;
 		}
 		input[type="checkbox"]:not(checked) + label:before {
-			content: '\25CB';
-			font-size: 3rem;
+			content: '\25EF';
+			font-size: 1.3rem;
 			position: absolute;
-			top: -1.5rem;
+			top: -0.4rem;
 			left: 0.9rem;
 		}
 		input[type="checkbox"]:hover + label:before {
@@ -383,6 +383,8 @@ header {
 		}
 		input[type="checkbox"]:checked + label:before {
 			content: '\2714';
+			font-size: 2rem;
+			top: -0.7rem;
 			color: #009122;
 		}
 		input[type="checkbox"]:checked + label {
@@ -512,15 +514,16 @@ header {
 			padding-top: 1.5rem;
 			padding-bottom: 1.5rem;
 			border-bottom: 0.1rem solid $back_color;
-			@include custom_input('radio', '\25CB', '\25C9', #009122);
+			@include custom_input('radio', '\25EF', '\25C9', #009122);
 			input[type="radio"]:not(checked) + label:before {
-				top: -1.45rem;
-    			left: 0.7rem;
+				font-size: 1.3rem;
+				top: -0.4rem;
+    			left: 0.9rem;
 			}
 			input[type="radio"]:checked + label:before {
 				font-size: 1.8rem;
-			    top: -.7rem;
-			    left: 0.85rem;
+				top: -.7rem;
+				left: 0.82rem;
 			}
 			.radio {
 				padding: 1rem;
@@ -588,16 +591,17 @@ header {
 			ul {
 				padding: 1.5rem;
 				@include dflex(r, b, c);
-				@include custom_input('radio', '\25CB', '\25C9', #009122);
+				@include custom_input('radio', '\25EF', '\25C9', #009122);
 
 				input[type="radio"]:not(checked) + label:before {
-				top: -1.45rem;
-    			left: 0.7rem;
+					font-size: 1.3rem;
+					top: -0.4rem;
+					left: 0.9rem;
 				}
 				input[type="radio"]:checked + label:before {
-				font-size: 1.8rem;
-			    top: -.7rem;
-			    left: 0.85rem;
+					font-size: 1.8rem;
+					top: -.7rem;
+					left: 0.82rem;
 				}
 			}
 		} 
@@ -819,7 +823,7 @@ header {
 			}
 		}
 		.copyright {
-			@include dflex(c, b, st)
+			@include dflex(c, b, st);
 			.terms {
 				text-transform: uppercase;
 			}
