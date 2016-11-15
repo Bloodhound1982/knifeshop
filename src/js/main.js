@@ -13,6 +13,12 @@ $(document).ready(function() {
 		$('#slick').slick('slickPrev');
 	});
 
+	var dots = document.querySelectorAll('.dots>li>button');
+
+	for (var i = 0; i < dots.length; i++) {
+		dots[i].innerText = '';
+	}
+
 	var acc = document.getElementsByClassName('accordion');
 
 	for (var i = 0; i < acc.length; i++) {
