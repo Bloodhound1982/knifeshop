@@ -2,8 +2,8 @@ $(document).ready(function() {
 	$('.single-item').slick({
 	//	setting-mame: setting-value
 	dots: true,
-	adaptiveHeight: true
-
+	adaptiveHeight: true,
+	dotsClass: 'dots'
 	});
 
 	$('.btn-next').on('click', function() {

@@ -131,8 +131,9 @@ header {
 /*------------ Header end ------------- */
 /*------------ Carousel start ------------- */
 .carousel {
+	position: relative;
 
-	.slick-dots li button:before {
+/*	.slick-dots li button:before {
 		color: #fff;
 		top: -4rem;
 		content: '\25EF';
@@ -144,7 +145,34 @@ header {
 	    color: #fff;
 	    content: '\25C9';
 	    font-size: 1.4rem;
+	}  */
+
+	.dots {
+		top: 90%;
+		left: 49%;
+		position: absolute;
+
+		li {
+			display: inline-block;
+
+			button {
+				color: $font_color;
+
+				content: '\25EF';
+				border: none;
+				background: none;
+			}
+			button:focus {
+				content: '\25C9';
+				outline: 0;
+			}
+			button:hover {
+				color: #fff;
+			}
+		}
 	}
+
+
 	.btn-prev, .btn-next {
 			position: absolute;
 			border: 0.1rem solid #fff;
